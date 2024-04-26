@@ -20,6 +20,7 @@
 import torch
 from torch import nn
 import torch.optim as optim
+from sklearn.datasets import make_blobs
 
 # You can import whatever standard packages are required
 
@@ -33,7 +34,7 @@ def get_data_blobs(n_points=100):
   pass
   # write your code here
   # Refer to sklearn data sets
-  X, y = None
+  X, y = make_blobs(n_samples = n_points)
   # write your code ...
   return X,y
 

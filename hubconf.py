@@ -22,6 +22,8 @@ from torch import nn
 import torch.optim as optim
 from sklearn.datasets import make_blobs
 
+from sklearn.datasets import fetch_20newsgroups
+newsgroups_train = fetch_20newsgroups(subset='train')
 # You can import whatever standard packages are required
 
 # full sklearn, full pytorch, pandas, matplotlib, numpy are all available
@@ -29,6 +31,10 @@ from sklearn.datasets import make_blobs
 # Avoid pip install requirement on the evaluation program side, if you use above packages and sub-packages of them, then that is fine!
 
 ###### PART 1 ######
+
+def get_news():
+  newsgroups_train = fetch_20newsgroups(subset='train')
+  return newsgroups_train
 
 def get_data_blobs(n_points=100):
   pass
